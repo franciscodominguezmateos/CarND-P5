@@ -1,0 +1,37 @@
+Vehicle Detection and Tracking
+
+Histogram of Oriented Gradients (HOG)
+Criteria 	Meets Specifications
+
+-Have the HOG features been extracted from the training images?
+The skimage.features.hog() function or other method has been used to extract HOG features from the labeled training images provided.
+
+-Were the parameters used to extract HOG features explained / justified?
+The reasoning for the choices of parameters used for HOG feature extraction (orientations, pixels_per_cell, cells_per_block) has been explained.
+
+-Has a classifier been trained using HOG features exclusively?
+The HOG features extracted from the training data have been used to train a classifier, could be SVM, Decision Tree or other. Features should be scaled to zero mean and unit variance before training the classifier.
+
+Sliding Window Search
+Criteria 	Meets Specifications
+
+-Has a sliding-window technique been implemented to search for vehicles in the test images?
+A sliding window approach has been implemented, where overlapping tiles in each test image are classified as vehicle or non-vehicle. Some justification has been given for the particular implementation chosen.
+
+Video Implementation
+Criteria 	Meets Specifications
+
+-Has the pipeline been used to process the example videos and identify vehicles in each frame?
+The sliding-window search plus classifier has been used to search for and identify vehicles in the videos provided. Video output has been generated with detected vehicle positions drawn on each frame of video.
+
+-Has some sort of filtering mechanism been implemented to reject false positives? Does the method reduce the number of false positives?
+A method, such as requiring that a detection be found at or near the same position in several subsequent frames, (could be a heat map showing the location of repeat detections) is implemented as a means of rejecting false positives, and this demonstrably reduces the number of false positives.
+
+-Has some form of tracking been implemented to follow previously detected vehicles?
+The positions of detections are not just recorded per frame, but also followed frame to frame in order to follow the positions of high confidence detections.
+
+README
+Criteria 	Meets Specifications
+
+-Has a Readme file been included that describes in detail the steps taken to construct the pipeline, techniques used, areas where improvements could be made?
+The Readme file submitted with this project includes a detailed description of what steps were taken to achieve the result, what techniques were used to arrive at a successful result, what could be improved about their algorithm/pipeline, and what hypothetical cases would cause their pipeline to fail.
