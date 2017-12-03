@@ -137,7 +137,7 @@ class Detector():
         return self.onWindows
     def findHeatMap(self,image,windows):
         # Iterate through list of bboxes
-        heatMap = np.zeros_like(image[:,:,0]).astype(np.uint)
+        heatMap = np.zeros_like(image[:,:,0]).astype(np.int)
         for box in windows:
             # Add += 1 for all pixels inside each bbox
             heatMap[box[0][1]:box[1][1], box[0][0]:box[1][0]] += 1

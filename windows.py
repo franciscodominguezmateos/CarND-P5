@@ -24,12 +24,12 @@ class WindowsProject(WindowsFactory):
         self.rvec = np.array([0,0,0], np.float) # rotation vector
         self.tvec = np.array([0,0,0], np.float) # translation vector
         self.window3D=((-1.0,0.0,0.0),(1.0,2.0,0.0))
-        self.Xstart=-8.0
+        self.Xstart=-0.0
         self.Xend  =8.0
-        self.Xstep =0.75
+        self.Xstep =1
         self.Zstart=10.0
         self.Zend  =30.0
-        self.Zstep =2.5
+        self.Zstep =3
     def getZWindows3D(self,Z):
         windowsList=[]
         starty=self.window3D[0][1]
